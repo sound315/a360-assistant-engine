@@ -1,0 +1,36 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        { "header": "Access-Control-Allow-Private-Network", "operation": "set", "value": "true" },
+        { "header": "Access-Control-Allow-Origin", "operation": "set", "value": "*" },
+        { "header": "X-Frame-Options", "operation": "remove" },
+        { "header": "Content-Security-Policy", "operation": "remove" }
+      ]
+    },
+    "condition": {
+      "urlFilter": "http://localhost:8501/*",
+      "resourceTypes": ["main_frame", "sub_frame", "websocket", "xmlhttprequest"]
+    }
+  },
+  {
+    "id": 2,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        { "header": "Access-Control-Allow-Private-Network", "operation": "set", "value": "true" }
+      ],
+      "requestHeaders": [
+        { "header": "Access-Control-Request-Private-Network", "operation": "remove" }
+      ]
+    },
+    "condition": {
+      "urlFilter": "http://localhost:8501/*",
+      "resourceTypes": ["main_frame", "sub_frame"]
+    }
+  }
+]

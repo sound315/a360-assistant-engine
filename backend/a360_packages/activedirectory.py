@@ -1,0 +1,40 @@
+# -*- coding: utf-8 -*-
+PACKAGE_NAME        = "Active Directory"
+PACKAGE_ID          = "command-group:activedirectory"
+PACKAGE_DESCRIPTION = "그룹 또는 조직 전체에서 사용자를 관리하기 위해 Active Directory 작업을 자동화합니다. 주요 액션: 그룹에 사용자 추가(사용자가 만든 그룹에 기존 사용자를 추가합니다.)、사용자 비밀번호 변경(사용자 비밀번호를 변경합니다.)、연결(Active Directory 서버와의 연결을 설정합니다. 이것은 Act...)、컴퓨터 생성(컴퓨터에 대한 새 객체를 생성합니다.)、그룹 생성(새 그룹을 생성합니다.) 외 28개."
+
+ACTIONS = [
+    {"action": "그룹에 사용자 추가", "data_item_name": "activedirectory#adduserstogroup", "description": "사용자가 만든 그룹에 기존 사용자를 추가합니다."},
+    {"action": "사용자 비밀번호 변경", "data_item_name": "activedirectory#changeusercredential", "description": "사용자 비밀번호를 변경합니다."},
+    {"action": "연결", "data_item_name": "activedirectory#connect", "description": "Active Directory 서버와의 연결을 설정합니다. 이것은 Active Directory 관련 작업을 자동화하는 데 사용할 첫 번째 작업이어야 합니다."},
+    {"action": "컴퓨터 생성", "data_item_name": "activedirectory#createcomputer", "description": "컴퓨터에 대한 새 객체를 생성합니다."},
+    {"action": "그룹 생성", "data_item_name": "activedirectory#creategroup", "description": "새 그룹을 생성합니다."},
+    {"action": "조직 구성 단위 생성", "data_item_name": "activedirectory#createorganizationalunit", "description": "조직 단위에 대한 새 객체를 생성합니다."},
+    {"action": "사용자 생성", "data_item_name": "activedirectory#createuser", "description": "새 사용자를 구성하고 활성화합니다."},
+    {"action": "컴퓨터 삭제", "data_item_name": "activedirectory#deletecomputer", "description": "기존 컴퓨터를 삭제합니다."},
+    {"action": "그룹 삭제", "data_item_name": "activedirectory#deletegroup", "description": "기존 그룹을 삭제합니다."},
+    {"action": "조직 구성 단위 삭제", "data_item_name": "activedirectory#deleteorganizationalunit", "description": "기존 조직 단위를 삭제합니다."},
+    {"action": "사용자 삭제", "data_item_name": "activedirectory#deleteuser", "description": "기존 사용자를 삭제합니다."},
+    {"action": "사용자 계정 비활성화", "data_item_name": "activedirectory#disableuseraccount", "description": "사용자 계정을 비활성화합니다."},
+    {"action": "연결 끊기", "data_item_name": "activedirectory#disconnect", "description": "Active Directory 서버와의 연결을 종료합니다."},
+    {"action": "사용자 계정 활성화", "data_item_name": "activedirectory#enableuseraccount", "description": "사용자 계정을 활성화합니다."},
+    {"action": "그룹의 모든 사용자 가져오기", "data_item_name": "activedirectory#getallusersofgroup", "description": "그룹의 모든 사용자 목록을 검색하고 결과를 변수에 할당합니다."},
+    {"action": "컴퓨터 속성 가져오기", "data_item_name": "activedirectory#getcomputerproperty", "description": "컴퓨터의 특정 속성 값을 검색합니다."},
+    {"action": "그룹 속성 가져오기", "data_item_name": "activedirectory#getgroupproperty", "description": "조직에 대한 특정 속성 값을 검색하고 결과를 변수에 할당합니다."},
+    {"action": "조직 구성 단위 속성 가져오기", "data_item_name": "activedirectory#getorganizationalunitproperty", "description": "Active Directory의 조직 구성 단위 속성 가져오기"},
+    {"action": "사용자 속성 가져오기", "data_item_name": "activedirectory#getuserproperty", "description": "사용자에 대한 특정 속성 값을 검색하고 결과를 변수에 할당합니다."},
+    {"action": "컴퓨터 이동", "data_item_name": "activedirectory#movecomputer", "description": "컴퓨터를 기존 위치에서 새 위치로 이동합니다."},
+    {"action": "조직 구성 단위 이동", "data_item_name": "activedirectory#moveorganizationalunit", "description": "조직 단위를 기존 위치에서 새 위치로 이동합니다."},
+    {"action": "그룹에서 사용자 삭제", "data_item_name": "activedirectory#removeusersfromgroup", "description": "그룹에서 사용자를 제거합니다."},
+    {"action": "컴퓨터 이름 바꾸기", "data_item_name": "activedirectory#renamecomputer", "description": "기존 컴퓨터의 이름을 바꿉니다."},
+    {"action": "그룹 이름 바꾸기", "data_item_name": "activedirectory#renamegroup", "description": "기존 그룹의 이름을 바꿉니다."},
+    {"action": "조직 구성 단위 이름 바꾸기", "data_item_name": "activedirectory#renameorganizationalunit", "description": "기존 조직 단위의 이름을 바꿉니다."},
+    {"action": "사용자 이름 바꾸기", "data_item_name": "activedirectory#renameuser", "description": "사용자 로그온 이름 또는 사용자 계정 이름을 바꿉니다."},
+    {"action": "쿼리 실행", "data_item_name": "activedirectory#runquery", "description": "지정된 Active Directory 쿼리를 실행합니다. 결과는 객체 이름 또는 LDAP 경로에 대한 목록 변수에 저장됩니다."},
+    {"action": "컴퓨터 속성 설정", "data_item_name": "activedirectory#setcomputerproperty", "description": "컴퓨터 속성에 값을 할당합니다."},
+    {"action": "그룹 속성 설정", "data_item_name": "activedirectory#setgroupproperty", "description": "그룹 속성에 값을 할당합니다."},
+    {"action": "조직 구성 단위 속성 설정", "data_item_name": "activedirectory#setorganizationalunitproperty", "description": "조직 속성에 값을 할당합니다."},
+    {"action": "사용자 속성 설정", "data_item_name": "activedirectory#setuserproperty", "description": "사용자 속성에 값을 할당하고 현재 세부 정보를 표시하고 업데이트합니다."},
+    {"action": "계정 옵션 업데이트", "data_item_name": "activedirectory#updateaccountoptions", "description": "사용자의 계정 속성을 설정합니다."},
+    {"action": "사용자 세부정보 업데이트", "data_item_name": "activedirectory#updateuser", "description": "사용자의 세부 정보를 업데이트합니다."},
+]

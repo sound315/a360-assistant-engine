@@ -1,0 +1,43 @@
+# -*- coding: utf-8 -*-
+PACKAGE_NAME        = "Google Sheets"
+PACKAGE_ID          = "command-group:google sheets v1"
+PACKAGE_DESCRIPTION = "Google Sheets의 셀, 열, 행 및 시트와 관련된 태스크를 자동화합니다. 주요 액션: 시트 활성화(열려 있는 스프레드시트에서 특정 시트를 활성화합니다.)、열 자동 맞춤(데이터를 수용할 수 있도록 데이터가 포함된 열의 크기를 조정합니다.)、행 자동 맞춤(데이터를 수용할 수 있도록 데이터가 포함된 행의 크기를 조정합니다.)、닫기(현재 스프레드시트를 저장하고 닫습니다.)、연결(Google 서버와의 연결을 설정합니다.) 외 31개."
+
+ACTIONS = [
+    {"action": "시트 활성화", "data_item_name": "google sheets v1#activatesheet", "description": "열려 있는 스프레드시트에서 특정 시트를 활성화합니다."},
+    {"action": "열 자동 맞춤", "data_item_name": "google sheets v1#autofitcolumns", "description": "데이터를 수용할 수 있도록 데이터가 포함된 열의 크기를 조정합니다."},
+    {"action": "행 자동 맞춤", "data_item_name": "google sheets v1#autofitrows", "description": "데이터를 수용할 수 있도록 데이터가 포함된 행의 크기를 조정합니다."},
+    {"action": "닫기", "data_item_name": "google sheets v1#closespreadsheet", "description": "현재 스프레드시트를 저장하고 닫습니다."},
+    {"action": "연결", "data_item_name": "google sheets v1#connect", "description": "Google 서버와의 연결을 설정합니다."},
+    {"action": "시트 생성", "data_item_name": "google sheets v1#createsheet", "description": "열려 있는 통합 문서에 새 시트를 만듭니다."},
+    {"action": "통합 문서 생성", "data_item_name": "google sheets v1#create", "description": "새 통합 문서를 생성합니다"},
+    {"action": "셀 삭제", "data_item_name": "google sheets v1#deletecell", "description": "워크시트 내의 셀을 삭제합니다."},
+    {"action": "범위 삭제", "data_item_name": "google sheets v1#deleterange", "description": "셀 범위를 삭제합니다."},
+    {"action": "행/열 삭제", "data_item_name": "google sheets v1#deleterowcolumn", "description": "워크시트에서 행이나 열을 삭제합니다."},
+    {"action": "시트 삭제", "data_item_name": "google sheets v1#deleteworksheet", "description": "통합 문서에서 시트를 삭제합니다."},
+    {"action": "연결 끊기", "data_item_name": "google sheets v1#disconnect", "description": "Google 서버와의 연결을 종료합니다."},
+    {"action": "셀 서식", "data_item_name": "google sheets v1#formatcells", "description": "통합 문서의 특정 셀 서식을 지정합니다."},
+    {"action": "모든 시트 이름 가져오기", "data_item_name": "google sheets v1#getallsheetnames", "description": "특정 통합 문서 내의 모든 시트 이름을 검색하여 변수로 저장합니다."},
+    {"action": "셀/텍스트 색상 가져오기", "data_item_name": "google sheets v1#getcellcolor", "description": "RGB 값으로 셀의 배경색 또는 텍스트 색상을 검색합니다."},
+    {"action": "현재 시트 이름 가져오기", "data_item_name": "google sheets v1#getcurrentsheetname", "description": "통합 문서에서 현재 워크시트의 이름을 검색합니다."},
+    {"action": "여러 셀 가져오기", "data_item_name": "google sheets v1#getmultiplecells", "description": "Google 시트의 셀에서 값을 검색하여 테이블 변수에 저장합니다."},
+    {"action": "행 개수 가져오기", "data_item_name": "google sheets v1#getnumberofrows", "description": "비어 있지 않거나 데이터가 포함된 행 수를 검색합니다."},
+    {"action": "단일 셀 가져오기", "data_item_name": "google sheets v1#getsinglecell", "description": "Google 시트의 특정 셀에서 값을 검색하여 문자열 변수에 저장합니다."},
+    {"action": "셀로 이동", "data_item_name": "google sheets v1#gotocell", "description": "지정된 셀로 이동합니다"},
+    {"action": "워크시트 숨기기", "data_item_name": "google sheets v1#hideworksheet", "description": "현재 통합 문서에서 워크시트를 숨깁니다."},
+    {"action": "셀 삽입", "data_item_name": "google sheets v1#insertcell", "description": "기존 셀을 이동하여 통합 문서의 특정 지점에 셀을 삽입합니다."},
+    {"action": "범위 삽입", "data_item_name": "google sheets v1#insertrange", "description": "기존 값을 덮어쓰지 않고 현재 워크시트에 범위를 삽입합니다."},
+    {"action": "행/열 삽입", "data_item_name": "google sheets v1#insertrowcolumn", "description": "빈 행이나 열을 스프레드시트에 삽입합니다."},
+    {"action": "스프레드시트 열기", "data_item_name": "google sheets v1#open", "description": "기존 스프레드시트를 엽니다"},
+    {"action": "셀 붙여넣기", "data_item_name": "google sheets v1#pastecell", "description": "셀에서 값을 복사하여 지정된 셀에 붙여넣습니다."},
+    {"action": "셀 수식 읽기", "data_item_name": "google sheets v1#readcellformula", "description": "활성 셀 또는 특정 셀에서 사용 가능한 수식을 검색하고 출력을 문자열 변수에 할당합니다. 지정된 셀에 수식이 포함되어 있지 않으면 빈 값을 반환합니다."},
+    {"action": "열 읽기", "data_item_name": "google sheets v1#readcolumn", "description": "열에서 데이터를 검색하여 목록 변수에 저장합니다."},
+    {"action": "행 읽기", "data_item_name": "google sheets v1#readrow", "description": "행에서 데이터를 검색하여 목록 변수에 저장합니다."},
+    {"action": "시트 이름 바꾸기", "data_item_name": "google sheets v1#renamesheet", "description": "통합 문서의 특정 시트 이름을 바꿉니다."},
+    {"action": "시트 개수 검색", "data_item_name": "google sheets v1#retrievesheetscount", "description": "현재 통합 문서에서 사용 가능한 시트 수를 검색하여 숫자 변수에 저장합니다."},
+    {"action": "셀/텍스트 색상 설정하기", "data_item_name": "google sheets v1#setcellcolor", "description": "특정 셀의 값을 설정합니다."},
+    {"action": "셀 수식 설정", "data_item_name": "google sheets v1#setcellformula", "description": "시트의 활성 셀 또는 특정 셀에 수식을 설정합니다."},
+    {"action": "셀 설정", "data_item_name": "google sheets v1#setsinglecell", "description": "특정 셀의 값을 설정합니다."},
+    {"action": "워크시트 보기", "data_item_name": "google sheets v1#showworksheet", "description": "워크시트에 숨겨진 시트를 표시합니다."},
+    {"action": "데이터 테이블로부터 쓰기", "data_item_name": "google sheets v1#writedatatabletowspreadsheet", "description": "데이터 테이블 변수의 내용을 특정 스프레드시트에 씁니다."},
+]

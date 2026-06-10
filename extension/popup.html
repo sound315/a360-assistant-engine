@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>A360 Assistant</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      width: 280px;
+      padding: 16px;
+      margin: 0;
+      background: #f8f9fa;
+    }
+    h2 {
+      margin: 0 0 8px;
+      font-size: 16px;
+      color: #1a73e8;
+    }
+    p {
+      margin: 0 0 12px;
+      font-size: 13px;
+      color: #555;
+    }
+    .status {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      padding: 8px;
+      border-radius: 6px;
+      background: #fff;
+      border: 1px solid #e0e0e0;
+    }
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #34a853;
+    }
+    .dot.inactive {
+      background: #bbb;
+    }
+    a {
+      color: #1a73e8;
+      font-size: 12px;
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <h2>🤖 A360 Assistant</h2>
+  <p>A360 작업 편집기에서 AI 챗봇이 자동으로 활성화됩니다.</p>
+  <div class="status">
+    <div class="dot" id="dot"></div>
+    <span id="status-text">확인 중...</span>
+  </div>
+  <br/>
+  <a href="http://localhost:8501" target="_blank">챗봇 직접 열기 ↗</a>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "A360 Assistant",
+  "version": "1.0.0",
+  "description": "A360 작업 편집기에 AI 챗봇을 임베딩합니다.",
+  "permissions": ["activeTab", "scripting", "declarativeNetRequest", "declarativeNetRequestWithHostAccess"],
+  "host_permissions": [
+    "http://www.a360-kds.com/*",
+    "http://localhost:8501/*",
+    "http://localhost:8000/*"
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_localhost",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://www.a360-kds.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "A360 Assistant"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}

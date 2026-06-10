@@ -1,0 +1,370 @@
+[
+  {
+    "tag": "div",
+    "attrs": {
+      "data-path": "EditorPalette.item",
+      "data-item-name": "samplenumber",
+      "class": "editor-palette-item"
+    },
+    "ownText": "",
+    "children": [
+      {
+        "tag": "div",
+        "attrs": {
+          "class": "editor-palette-item__child",
+          "draggable": "false"
+        },
+        "ownText": "",
+        "children": [
+          {
+            "tag": "button",
+            "attrs": {
+              "data-indent": "1",
+              "name": "item-button",
+              "data-input-status": "INTERACTIVE",
+              "type": "button",
+              "tabindex": "-1",
+              "class": "rio-focus rio-focus--inset_0 rio-focus--border-radius_4px rio-focus--has_element-focus-visible rio-bare-button g-reset-element rio-bare-button--is_interactive rio-bare-button--rio_interactive-softest rio-bare-button--is_parent rio-bare-button--is_clickable rio-bare-button--size_14px rio-bare-button--padding-for-size_14px editor-palette-item__child-label-button g-reset-element g-override",
+              "style": "padding-inline-start: 16px;"
+            },
+            "ownText": "",
+            "children": [
+              {
+                "tag": "div",
+                "attrs": {
+                  "class": "editor-palette-item__child-icon"
+                },
+                "ownText": "",
+                "children": [
+                  {
+                    "tag": "span",
+                    "attrs": {
+                      "class": "rio-icon rio-icon--icon_hashtag g-box-sizing_border-box taskbot-variable-icon__rio-icon g-override",
+                      "style": "--rio-icon-font-size: 16px;"
+                    },
+                    "ownText": "",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "span",
+                "attrs": {
+                  "data-path": "ClippedText",
+                  "data-text": "SampleNumber",
+                  "class": "clipped-text clipped-text--no_wrap editor-palette-item__child-label"
+                },
+                "ownText": "",
+                "children": [
+                  {
+                    "tag": "span",
+                    "attrs": {
+                      "class": "clipped-text__string clipped-text__string--for_presentation"
+                    },
+                    "ownText": "SampleNumber",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "tag": "div",
+    "attrs": {
+      "data-path": "EditorPalette.item",
+      "data-item-name": "samplestring",
+      "class": "editor-palette-item"
+    },
+    "ownText": "",
+    "children": [
+      {
+        "tag": "div",
+        "attrs": {
+          "class": "editor-palette-item__child",
+          "draggable": "false"
+        },
+        "ownText": "",
+        "children": [
+          {
+            "tag": "button",
+            "attrs": {
+              "data-indent": "1",
+              "name": "item-button",
+              "data-input-status": "INTERACTIVE",
+              "type": "button",
+              "tabindex": "-1",
+              "class": "rio-focus rio-focus--inset_0 rio-focus--border-radius_4px rio-focus--has_element-focus-visible rio-bare-button g-reset-element rio-bare-button--is_interactive rio-bare-button--rio_interactive-softest rio-bare-button--is_parent rio-bare-button--is_clickable rio-bare-button--size_14px rio-bare-button--padding-for-size_14px editor-palette-item__child-label-button g-reset-element g-override",
+              "style": "padding-inline-start: 16px;"
+            },
+            "ownText": "",
+            "children": [
+              {
+                "tag": "div",
+                "attrs": {
+                  "class": "editor-palette-item__child-icon"
+                },
+                "ownText": "",
+                "children": [
+                  {
+                    "tag": "span",
+                    "attrs": {
+                      "class": "rio-icon rio-icon--icon_double-quotation-mark g-box-sizing_border-box taskbot-variable-icon__rio-icon g-override",
+                      "style": "--rio-icon-font-size: 16px;"
+                    },
+                    "ownText": "",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "span",
+                "attrs": {
+                  "data-path": "ClippedText",
+                  "data-text": "SampleString",
+                  "class": "clipped-text clipped-text--no_wrap editor-palette-item__child-label"
+                },
+                "ownText": "",
+                "children": [
+                  {
+                    "tag": "span",
+                    "attrs": {
+                      "class": "clipped-text__string clipped-text__string--for_presentation"
+                    },
+                    "ownText": "SampleString",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "tag": "div",
+    "attrs": {
+      "data-path": "EditorPalette.item",
+      "data-item-name": "record#addcolumn",
+      "class": "editor-palette-item"
+    },
+    "ownText": "",
+    "children": [
+      {
+        "tag": "div",
+        "attrs": {
+          "class": "editor-palette-item__child editor-palette-item__child--is_draggable",
+          "draggable": "true"
+        },
+        "ownText": "",
+        "children": [
+          {
+            "tag": "button",
+            "attrs": {
+              "data-indent": "1",
+              "name": "item-button",
+              "data-input-status": "INTERACTIVE",
+              "type": "button",
+              "tabindex": "0",
+              "class": "rio-focus rio-focus--inset_0 rio-focus--border-radius_4px rio-focus--has_element-focus-visible rio-bare-button g-reset-element rio-bare-button--is_interactive rio-bare-button--rio_interactive-softest rio-bare-button--is_parent rio-bare-button--is_clickable rio-bare-button--size_14px rio-bare-button--padding-for-size_14px editor-palette-item__child-label-button g-reset-element g-override g-focus--shrink_2px",
+              "style": "padding-inline-start: 16px;"
+            },
+            "ownText": "",
+            "children": [
+              {
+                "tag": "div",
+                "attrs": {
+                  "class": "editor-palette-item__child-icon"
+                },
+                "ownText": "",
+                "children": [
+                  {
+                    "tag": "img",
+                    "attrs": {
+                      "class": "taskbot-node-icon taskbotitempalette_icon",
+                      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMiA4QzIgNi44OTU0MyAyLjg5NTQzIDYgNCA2SDIwQzIxLjEwNDYgNiAyMiA2Ljg5NTQzIDIyIDhWMTZDMjIgMTcuMTA0NiAyMS4xMDQ2IDE4IDIwIDE4SDRDMi44OTU0MyAxOCAyIDE3LjEwNDYgMiAxNlY4Wk0xNCAxMUgxMFYxNkgxNFYxMVpNMTYgMTFWMTZIMjBWMTFIMTZaTTQgMTFIOFYxNkg0VjExWiIgZmlsbD0iIzRFNkI4QyIvPg0KPC9zdmc+DQo=",
+                      "style": "width: 16px; height: 16px; font-size: 16px;"
+                    },
+                    "ownText": "",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "span",
+                "attrs": {
+                  "data-path": "ClippedText",
+                  "data-text": "열 추가",
+                  "class": "clipped-text clipped-text--no_wrap editor-palette-item__child-label"
+                },
+                "ownText": "",
+                "children": [
+                  {
+                    "tag": "span",
+                    "attrs": {
+                      "class": "clipped-text__string clipped-text__string--for_presentation"
+                    },
+                    "ownText": "열 추가",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "tag": "div",
+    "attrs": {
+      "data-path": "EditorPalette.item",
+      "data-item-name": "record#assign",
+      "class": "editor-palette-item"
+    },
+    "ownText": "",
+    "children": [
+      {
+        "tag": "div",
+        "attrs": {
+          "class": "editor-palette-item__child editor-palette-item__child--is_draggable",
+          "draggable": "true"
+        },
+        "ownText": "",
+        "children": [
+          {
+            "tag": "button",
+            "attrs": {
+              "data-indent": "1",
+              "name": "item-button",
+              "data-input-status": "INTERACTIVE",
+              "type": "button",
+              "tabindex": "0",
+              "class": "rio-focus rio-focus--inset_0 rio-focus--border-radius_4px rio-focus--has_element-focus-visible rio-bare-button g-reset-element rio-bare-button--is_interactive rio-bare-button--rio_interactive-softest rio-bare-button--is_parent rio-bare-button--is_clickable rio-bare-button--size_14px rio-bare-button--padding-for-size_14px editor-palette-item__child-label-button g-reset-element g-override g-focus--shrink_2px",
+              "style": "padding-inline-start: 16px;"
+            },
+            "ownText": "",
+            "children": [
+              {
+                "tag": "div",
+                "attrs": {
+                  "class": "editor-palette-item__child-icon"
+                },
+                "ownText": "",
+                "children": [
+                  {
+                    "tag": "img",
+                    "attrs": {
+                      "class": "taskbot-node-icon taskbotitempalette_icon",
+                      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMiA4QzIgNi44OTU0MyAyLjg5NTQzIDYgNCA2SDIwQzIxLjEwNDYgNiAyMiA2Ljg5NTQzIDIyIDhWMTZDMjIgMTcuMTA0NiAyMS4xMDQ2IDE4IDIwIDE4SDRDMi44OTU0MyAxOCAyIDE3LjEwNDYgMiAxNlY4Wk0xNCAxMUgxMFYxNkgxNFYxMVpNMTYgMTFWMTZIMjBWMTFIMTZaTTQgMTFIOFYxNkg0VjExWiIgZmlsbD0iIzRFNkI4QyIvPg0KPC9zdmc+DQo=",
+                      "style": "width: 16px; height: 16px; font-size: 16px;"
+                    },
+                    "ownText": "",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "span",
+                "attrs": {
+                  "data-path": "ClippedText",
+                  "data-text": "지정",
+                  "class": "clipped-text clipped-text--no_wrap editor-palette-item__child-label"
+                },
+                "ownText": "",
+                "children": [
+                  {
+                    "tag": "span",
+                    "attrs": {
+                      "class": "clipped-text__string clipped-text__string--for_presentation"
+                    },
+                    "ownText": "지정",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "tag": "div",
+    "attrs": {
+      "data-path": "EditorPalette.item",
+      "data-item-name": "record#deletecolumn",
+      "class": "editor-palette-item"
+    },
+    "ownText": "",
+    "children": [
+      {
+        "tag": "div",
+        "attrs": {
+          "class": "editor-palette-item__child editor-palette-item__child--is_draggable",
+          "draggable": "true"
+        },
+        "ownText": "",
+        "children": [
+          {
+            "tag": "button",
+            "attrs": {
+              "data-indent": "1",
+              "name": "item-button",
+              "data-input-status": "INTERACTIVE",
+              "type": "button",
+              "tabindex": "0",
+              "class": "rio-focus rio-focus--inset_0 rio-focus--border-radius_4px rio-focus--has_element-focus-visible rio-bare-button g-reset-element rio-bare-button--is_interactive rio-bare-button--rio_interactive-softest rio-bare-button--is_parent rio-bare-button--is_clickable rio-bare-button--size_14px rio-bare-button--padding-for-size_14px editor-palette-item__child-label-button g-reset-element g-override g-focus--shrink_2px",
+              "style": "padding-inline-start: 16px;"
+            },
+            "ownText": "",
+            "children": [
+              {
+                "tag": "div",
+                "attrs": {
+                  "class": "editor-palette-item__child-icon"
+                },
+                "ownText": "",
+                "children": [
+                  {
+                    "tag": "img",
+                    "attrs": {
+                      "class": "taskbot-node-icon taskbotitempalette_icon",
+                      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMiA4QzIgNi44OTU0MyAyLjg5NTQzIDYgNCA2SDIwQzIxLjEwNDYgNiAyMiA2Ljg5NTQzIDIyIDhWMTZDMjIgMTcuMTA0NiAyMS4xMDQ2IDE4IDIwIDE4SDRDMi44OTU0MyAxOCAyIDE3LjEwNDYgMiAxNlY4Wk0xNCAxMUgxMFYxNkgxNFYxMVpNMTYgMTFWMTZIMjBWMTFIMTZaTTQgMTFIOFYxNkg0VjExWiIgZmlsbD0iIzRFNkI4QyIvPg0KPC9zdmc+DQo=",
+                      "style": "width: 16px; height: 16px; font-size: 16px;"
+                    },
+                    "ownText": "",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "tag": "span",
+                "attrs": {
+                  "data-path": "ClippedText",
+                  "data-text": "열 삭제",
+                  "class": "clipped-text clipped-text--no_wrap editor-palette-item__child-label"
+                },
+                "ownText": "",
+                "children": [
+                  {
+                    "tag": "span",
+                    "attrs": {
+                      "class": "clipped-text__string clipped-text__string--for_presentation"
+                    },
+                    "ownText": "열 삭제",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
