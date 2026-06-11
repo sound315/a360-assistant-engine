@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from a360_tasks import A360_TASKS
 from llm_client import chat_with_llm
-from schemas import ChatRequest, ChatResponse, A360Action
+from schemas import ChatRequest, ChatResponse, A360Action, TokenUsage
 
 # (package, action) → data_item_name 룩업 (actions.json 기반 실제 값)
 _ITEM_NAME_MAP = {(t["package"], t["action"]): t["data_item_name"] for t in A360_TASKS}
@@ -44,6 +44,7 @@ def chat(request: ChatRequest):
         llm_message = result.get("message", "")
         if not llm_message:
             llm_message = "、".join(f"{s.package} > {s.action}" for s in steps) or "추천 액션이 없습니다."
-        return ChatResponse(steps=steps, message=llm_message)
+        usage = TokenUsage(**result["usage"]) if result.get("usage") else None
+        return ChatResponse(steps=steps, message=llm_message, usage=usage)
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))

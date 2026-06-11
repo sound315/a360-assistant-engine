@@ -49,6 +49,22 @@ def _build_system_prompt() -> str:
     return SYSTEM_PROMPT.format(task_list="\n".join(lines))
 
 
+_CONTEXT_LIMITS = {
+    "gpt-4o": 128000,
+    "gpt-4o-mini": 128000,
+    "gpt-4-turbo": 128000,
+    "gpt-4": 8192,
+    "gpt-3.5-turbo": 16385,
+}
+
+
+def _get_context_limit(model: str) -> int:
+    for key, limit in _CONTEXT_LIMITS.items():
+        if key in model:
+            return limit
+    return 128000
+
+
 def _get_client():
     if os.getenv("AZURE_OPENAI_API_KEY"):
         return AzureOpenAI(
@@ -75,6 +91,7 @@ def chat_with_llm(message: str, history: list[dict]) -> dict:
     )
 
     raw = response.choices[0].message.content
+    usage = response.usage
     parsed = json.loads(raw)
 
     # steps 추출
@@ -101,4 +118,12 @@ def chat_with_llm(message: str, history: list[dict]) -> dict:
         if isinstance(s, dict) and (s.get("package"), s.get("action")) in ALLOWED_PAIRS
     ]
 
-    return {"steps": filtered, "message": llm_message}
+    usage_data = {
+        "model": model,
+        "prompt_tokens": usage.prompt_tokens if usage else 0,
+        "completion_tokens": usage.completion_tokens if usage else 0,
+        "total_tokens": usage.total_tokens if usage else 0,
+        "context_limit": _get_context_limit(model),
+    }
+
+    return {"steps": filtered, "message": llm_message, "usage": usage_data}

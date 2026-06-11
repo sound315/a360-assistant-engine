@@ -12,6 +12,8 @@ if "messages" not in st.session_state:
     st.session_state.messages = []
 if "last_steps" not in st.session_state:
     st.session_state.last_steps = []
+if "last_usage" not in st.session_state:
+    st.session_state.last_usage = None
 
 col_chat, col_result = st.columns([3, 2])
 
@@ -43,6 +45,7 @@ with col_chat:
                     steps = data.get("steps", [])
                     reply = data.get("message", "") or "추천 액션이 없습니다."
                     st.session_state.last_steps = steps
+                    st.session_state.last_usage = data.get("usage")
 
                     st.markdown(reply)
                     st.session_state.messages.append({"role": "assistant", "content": reply})
@@ -99,4 +102,24 @@ with col_result:
     if st.button("🗑️ 초기화"):
         st.session_state.messages = []
         st.session_state.last_steps = []
+        st.session_state.last_usage = None
         st.rerun()
+
+# 푸터: 토큰 사용량 & 컨텍스트
+usage = st.session_state.last_usage
+if usage:
+    model_name = usage.get("model", "unknown")
+    prompt_tok = usage.get("prompt_tokens", 0)
+    completion_tok = usage.get("completion_tokens", 0)
+    total_tok = usage.get("total_tokens", 0)
+    ctx_limit = usage.get("context_limit", 128000)
+    ctx_pct = round(total_tok / ctx_limit * 100, 1) if ctx_limit else 0
+
+    st.divider()
+    st.caption(
+        f"모델: `{model_name}` &nbsp;|&nbsp; "
+        f"입력: `{prompt_tok:,}` 토큰 &nbsp;|&nbsp; "
+        f"출력: `{completion_tok:,}` 토큰 &nbsp;|&nbsp; "
+        f"합계: `{total_tok:,}` 토큰 &nbsp;|&nbsp; "
+        f"컨텍스트: `{total_tok:,} / {ctx_limit:,}` ({ctx_pct}%)"
+    )

@@ -17,6 +17,15 @@ class A360Action(BaseModel):
     data_item_name: str | None = None
 
 
+class TokenUsage(BaseModel):
+    model: str
+    prompt_tokens: int
+    completion_tokens: int
+    total_tokens: int
+    context_limit: int
+
+
 class ChatResponse(BaseModel):
     steps: list[A360Action]
     message: str
+    usage: TokenUsage | None = None
