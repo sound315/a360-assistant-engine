@@ -12,7 +12,7 @@
       ]
     },
     "condition": {
-      "urlFilter": "http://localhost:8501/*",
+      "urlFilter": "https://a360-assistant-frontend-10058727458.asia-northeast3.run.app/*",
       "resourceTypes": ["main_frame", "sub_frame", "websocket", "xmlhttprequest"]
     }
   },
@@ -29,7 +29,7 @@
       ]
     },
     "condition": {
-      "urlFilter": "http://localhost:8501/*",
+      "urlFilter": "https://a360-assistant-frontend-10058727458.asia-northeast3.run.app/*",
       "resourceTypes": ["main_frame", "sub_frame"]
     }
   }

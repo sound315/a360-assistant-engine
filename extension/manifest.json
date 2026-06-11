@@ -6,8 +6,8 @@
   "permissions": ["activeTab", "scripting", "declarativeNetRequest", "declarativeNetRequestWithHostAccess"],
   "host_permissions": [
     "http://www.a360-kds.com/*",
-    "http://localhost:8501/*",
-    "http://localhost:8000/*"
+    "https://a360-assistant-frontend-10058727458.asia-northeast3.run.app/*",
+    "https://a360-assistant-backend-10058727458.asia-northeast3.run.app/*"
   ],
   "declarative_net_request": {
     "rule_resources": [

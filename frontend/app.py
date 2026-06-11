@@ -2,7 +2,7 @@ import json
 import requests
 import streamlit as st
 
-BACKEND_URL = "https://a360-assistant-engine-10058727458.asia-northeast3.run.app"
+BACKEND_URL = "https://a360-assistant-backend-10058727458.asia-northeast3.run.app"
 
 st.set_page_config(page_title="A360 Assistant", page_icon="🤖", layout="wide")
 st.title("🤖 A360 Assistant Engine")

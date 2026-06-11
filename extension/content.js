@@ -63,7 +63,7 @@ function injectChatbot() {
 
   const iframe = document.createElement("iframe");
   iframe.id = "a360-assistant-iframe";
-  iframe.src = "http://localhost:8501";
+  iframe.src = "https://a360-assistant-frontend-10058727458.asia-northeast3.run.app";
   iframe.style.cssText = "flex:1;border:none;background:#fff;";
 
   wrapper.appendChild(header);
