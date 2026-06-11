@@ -67,7 +67,37 @@ FastAPI 백엔드, Streamlit UI, Chrome Extension 초기 골격 구현
 
 ---
 
-## Phase 4 — Extension 실환경 연동 (진행 중)
+## Phase 5 — Cloud Run 배포 (완료, 2026-06-12)
+
+### 범위
+FastAPI 백엔드 + Streamlit 프론트엔드를 Google Cloud Run 서버리스로 배포
+
+### 수용 기준
+- [x] 백엔드 Cloud Run 배포 및 /health 응답 확인
+- [x] 프론트엔드 Cloud Run 배포 및 HTTP 200 확인
+- [x] Azure OpenAI 환경변수 Cloud Run 설정 완료
+- [x] 확장프로그램 URL → Cloud Run URL로 교체
+- [x] GitHub Cloud Build 트리거 연동 (main 브랜치 push → 자동 빌드)
+
+### 체크리스트
+- [x] backend/Dockerfile, requirements.txt, .dockerignore 추가
+- [x] frontend/Dockerfile, requirements.txt, .dockerignore 추가
+- [x] frontend/app.py BACKEND_URL → Cloud Run 백엔드 URL
+- [x] extension/content.js iframe.src → Cloud Run 프론트엔드 URL
+- [x] extension/popup.html 챗봇 링크 → Cloud Run 프론트엔드 URL
+- [x] extension/manifest.json host_permissions → Cloud Run URL + http://a360-kds.com/* (www 제거)
+- [x] Cloud Build 트리거 Dockerfile 빌드 설정 (backend/, frontend/ 각각)
+- [x] 종단 테스트 확인 (확장프로그램 → Streamlit → FastAPI → Azure OpenAI)
+
+### 배포 정보
+| 서비스 | URL |
+|--------|-----|
+| 백엔드 | https://a360-assistant-backend-10058727458.asia-northeast3.run.app |
+| 프론트엔드 | https://a360-assistant-frontend-10058727458.asia-northeast3.run.app |
+
+---
+
+## Phase 4 — Extension 실환경 연동 (완료)
 
 ### 범위
 챗봇 결과(steps)를 Chrome Extension으로 전달하여 A360 편집기에 자동 추가하는 종단 연동
