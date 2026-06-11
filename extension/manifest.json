@@ -5,7 +5,7 @@
   "description": "A360 작업 편집기에 AI 챗봇을 임베딩합니다.",
   "permissions": ["activeTab", "scripting", "declarativeNetRequest", "declarativeNetRequestWithHostAccess"],
   "host_permissions": [
-    "http://www.a360-kds.com/*",
+    "https://a360-kds.com/*",
     "https://a360-assistant-frontend-10058727458.asia-northeast3.run.app/*",
     "https://a360-assistant-backend-10058727458.asia-northeast3.run.app/*"
   ],
@@ -20,7 +20,7 @@
   },
   "content_scripts": [
     {
-      "matches": ["http://www.a360-kds.com/*"],
+      "matches": ["https://a360-kds.com/*"],
       "js": ["content.js"],
       "run_at": "document_idle"
     }
