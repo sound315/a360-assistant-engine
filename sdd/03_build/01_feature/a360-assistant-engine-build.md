@@ -20,7 +20,7 @@
 - JSON 다운로드 버튼
 
 ### extension/
-- `manifest.json`: MV3, `http://www.a360-kds.com/*`
+- `manifest.json`: MV3, `http://a360-kds.com/*`
 - `content.js`: 해시 URL 패턴 감지, 드래그 가능 iframe 주입, expandAllGroups(), addActionToEditor()
   - 액션 셀렉터: `[data-path="EditorPalette.item"][data-item-name="{data_item_name}"]`
   - SPA 해시 변경 MutationObserver 감지
@@ -118,6 +118,37 @@
 | `test_add.js` | dispatch 방식별 노드 추가 | leaf 시퀀스 +1, 컨테이너 dispatch 변화없음 |
 | `test_selective.js` | 선택적 그룹 펼치기 | 3패키지만 펼침(3/106), 노드 +3 |
 | `test_collapse_all.js` | 캔버스 전체 접기/펼치기 | 중첩 4→접기2, 펼치기 4 복원 |
+
+---
+
+## Phase 5 — Cloud Run 배포 (2026-06-12)
+
+### backend/Dockerfile, requirements.txt, .dockerignore 추가
+- `python:3.11-slim` 기반
+- `uvicorn main:app --host 0.0.0.0 --port 8080`
+
+### frontend/Dockerfile, requirements.txt, .dockerignore 추가
+- `python:3.11-slim` 기반
+- `streamlit run app.py --server.port=8080 --server.address=0.0.0.0`
+
+### 배포된 서비스
+| 서비스 | URL |
+|--------|-----|
+| 백엔드 (FastAPI) | https://a360-assistant-backend-10058727458.asia-northeast3.run.app |
+| 프론트엔드 (Streamlit) | https://a360-assistant-frontend-10058727458.asia-northeast3.run.app |
+
+### URL 변경 내역
+- `frontend/app.py` BACKEND_URL → Cloud Run 백엔드 URL
+- `extension/content.js` iframe.src → Cloud Run 프론트엔드 URL
+- `extension/popup.html` 챗봇 링크 → Cloud Run 프론트엔드 URL
+- `extension/manifest.json` host_permissions → Cloud Run URL, `http://a360-kds.com/*` (www 제거)
+
+### 코드 변경 시 배포 방법 (수동)
+1. git push origin main
+2. Cloud Build 트리거 수동 실행
+3. Cloud Run → 새 버전 수정 및 배포 → 이미지 선택 → 최신 이미지 → 배포
+
+---
 
 ## 구현 제약사항
 - 시스템 프롬프트: ~88,000자 / ~16,000 tokens (패키지 설명 포함)

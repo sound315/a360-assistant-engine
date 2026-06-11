@@ -168,6 +168,19 @@ streamlit run app.py --server.port 8501
 
 ---
 
+---
+
+## Cloud Run 배포 검증 (2026-06-12)
+
+| 항목 | 결과 |
+|------|------|
+| 백엔드 `GET /health` | `{"status":"ok"}` ✅ |
+| 백엔드 `POST /chat` | 정상 응답 (Azure OpenAI gpt-5.4-mini) ✅ |
+| 프론트엔드 HTTP 200 | ✅ |
+| 확장프로그램 iframe 표시 | ✅ |
+
+---
+
 ## 잔여 위험
 
 | 항목 | 위험 | 비고 |
